@@ -54,7 +54,7 @@ If you get the problem from the coding interviews, then create the folder struct
  ````
  | InterviewQuestions
  | - CompanyName
- | --- Interview
+ | --- InterviewYear
  | ------ ProblemId-Problem titile/Question titile
  | --------- Problem description/ question description
  | --------- Solutions
