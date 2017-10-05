@@ -1,3 +1,5 @@
+https://code.google.com/codejam/contest/5314486/dashboard#s=p0
+
 ## Problem A. Fresh Chocolate
 
 Problem
