@@ -39,22 +39,24 @@ Please follow this steps to start your contribution,
  | CompetitionName
  | - CompetitionYear-CompetitionVersion
  | --- ProblemId-Problem titile/Question titile
- | ------ Problem
- | --------- Problem description/ question description
+ | ------ Problem description/ question description
  | ------ Solutions
  | --------- LanguageName
  | ------------ SolutionFile
  ````
+You can add the Problem description/question description in this following ways,
+ 1. Create a question_name.md file and create the entry for the problem/question
+ 2. Drop the PDF version of the problem/question
+ 3. Use the HTML file of the problem/question (Only one HTML file)
 
 If you get the problem from the coding interviews, then create the folder structure like this following,
 
  ````
  | InterviewQuestions
  | - CompanyName
- | --- CompetitionYear
+ | --- InterviewYear
  | ------ ProblemId-Problem titile/Question titile
- | --------- Problem
- | ------------ Problem description/ question description
+ | --------- Problem description/ question description
  | --------- Solutions
  | ------------ LanguageName
  | --------------- SolutionFile
