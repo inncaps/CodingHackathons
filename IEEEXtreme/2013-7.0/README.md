@@ -3,9 +3,9 @@
 
 > If the competition organizers don't expose the problems/questions to the OpenSouce world, then please ignore that. Do not attach any illegal copies here. 
 
-## IEEEXtreme Competition 10.0 - 2016
+## IEEEXtreme Competition 8.0 - 2013
 
-Find the problems from here [Official PDF with Problems for IEEEXtreme 10.0](http://sites.ieee.org/xtreme/files/2017/01/Editorials.pdf)
+Find the problems from here [Problems Hackerrank for IEEEXtreme 7.0](https://www.hackerrank.com/contests/ieeextreme-first/challenges)
  
 ### Problems Titles
 
