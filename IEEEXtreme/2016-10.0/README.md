@@ -28,6 +28,9 @@ You can add the Problem description/question description in this following ways,
  2. Drop the PDF version of the problem/question
  3. Use the HTML file of the problem/question (Only one HTML file)
 
+ #### Solutions by [GoatCoders](https://github.com/ieeesbspain/IEEEXtreme/tree/master/challenges/ieeextreme10)
+
+
  ## Pull Request Guidelines
 
  Please follow this [guidelines](https://github.com/inncaps/CodingHackathons/blob/master/README.md).
