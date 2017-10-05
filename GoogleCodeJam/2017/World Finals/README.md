@@ -3,9 +3,9 @@
 
 > If the competition organizers don't expose the problems/questions to the OpenSouce world, then please ignore that. Do not attach any illegal copies here. 
 
-## IEEEXtreme Competition 10.0 - 2016
+## Google Code Jam - 2017 - World Finals 
 
-Find the problems from here [Official PDF with Problems for IEEEXtreme 10.0](http://sites.ieee.org/xtreme/files/2017/01/Editorials.pdf)
+Find the problems from here [Problems for Google Code Jam - 2017 - World Finals ](https://code.google.com/codejam/contest/6314486/dashboard)
  
 ### Problems Titles
 
