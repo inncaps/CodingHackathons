@@ -9,7 +9,9 @@ Find the problems from here [Problems for Google Code Jam - 2017 Round 1C](https
  
 ### Problems Titles
 
-> Please add the problem titles here
+* A. Ample Syrup
+* B. Parenting Partnering
+* C. Core Training
  
  ### Folder Structure of the Repository
  
