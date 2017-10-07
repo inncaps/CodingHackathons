@@ -1,0 +1,240 @@
+# Problem A. Ample Syrup
+https://code.google.com/codejam/contest/3274486/dashboard#s=p0
+Problem
+
+The kitchen at the Infinite House of Pancakes has just received an order for a stack of K pancakes! The chef currently has N pancakes available, where N ≥ K. Each pancake is a cylinder, and different pancakes may have different radii and heights.
+
+As the sous-chef, you must choose K out of the N available pancakes, discard the others, and arrange those K pancakes in a stack on a plate as follows. First, take the pancake that has the largest radius, and lay it on the plate on one of its circular faces. (If multiple pancakes have the same radius, you can use any of them.) Then, take the remaining pancake with the next largest radius and lay it on top of that pancake, and so on, until all K pancakes are in the stack and the centers of the circular faces are aligned in a line perpendicular to the plate, as illustrated by this example:
+
+A stack of pancakes with varying radii and thicknesses, obeying the rules in the statement.
+
+You know that there is only one thing your diners love as much as they love pancakes: syrup! It is best to maximize the total amount of exposed pancake surface area in the stack, since more exposed pancake surface area means more places to pour on delicious syrup. Any part of a pancake that is not touching part of another pancake or the plate is considered to be exposed.
+
+If you choose the K pancakes optimally, what is the largest total exposed pancake surface area you can achieve?
+
+Input
+
+The first line of the input gives the number of test cases, T. T test cases follow. Each begins with one line with two integers N and K: the total number of available pancakes, and the size of the stack that the diner has ordered. Then, N more lines follow. Each contains two integers Ri and Hi: the radius and height of the i-th pancake, in millimeters.
+
+Output
+
+For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the maximum possible total exposed pancake surface area, in millimeters squared. y will be considered correct if it is within an absolute or relative error of 10-6 of the correct answer. See the FAQ for an explanation of what that means, and what formats of real numbers we accept.
+
+Limits
+
+1 ≤ T ≤ 100.
+1 ≤ K ≤ N.
+1 ≤ Ri ≤ 106, for all i.
+1 ≤ Hi ≤ 106, for all i.
+Small dataset
+
+1 ≤ N ≤ 10.
+Large dataset
+
+1 ≤ N ≤ 1000.
+Sample
+
+
+Input 
+ 
+4
+2 1
+100 20
+200 10
+2 2
+100 20
+200 10
+3 2
+100 10
+100 10
+100 10
+4 2
+9 3
+7 1
+10 1
+8 4 	
+Output 
+
+
+Case #1: 138230.076757951
+Case #2: 150796.447372310
+Case #3: 43982.297150257
+Case #4: 625.176938064
+
+In Sample Case #1, the "stack" consists only of one pancake. A stack of just the first pancake would have an exposed area of π × R02 + 2 × π * R0 × H0 = 14000π mm2. A stack of just the second pancake would have an exposed area of 44000π mm2. So it is better to use the second pancake.
+
+In Sample Case #2, we can use both of the same pancakes from case #1. The first pancake contributes its top area and its side, for a total of 14000π mm2. The second pancake contributes some of its top area (the part not covered by the first pancake) and its side, for a total of 34000π mm2. The combined exposed surface area is 48000π mm2.
+
+In Sample Case #3, all of the pancakes have radius 100 and height 10. If we stack two of these together, we effectively have a single new cylinder of radius 100 and height 20. The exposed surface area is 14000π mm2.
+
+In Sample Case #4, the optimal stack uses the pancakes with radii of 8 and 9.
+
+
+# Problem B. Parenting Partnering
+https://code.google.com/codejam/contest/3274486/dashboard#s=p1
+Problem
+
+Cameron and Jamie are longtime life partners and have recently become parents! Being in charge of a baby, exciting as it is, is not without challenges. Given that both parents have a scientific mind, they have decided to take a scientific approach to baby care.
+
+Cameron and Jamie are establishing a daily routine and need to decide who will be the main person in charge of the baby at each given time. They have been equal partners their whole relationship, and they do not want to stop now, so they decided that each of them will be in charge for exactly 12 hours (720 minutes) per day.
+
+Cameron and Jamie have other activities that they either need or want to do on their own. Cameron has AC of these and Jamie has AJ. These activities always take place at the same times each day. None of Cameron's activities overlap with Jamie's activities, so at least one of the parents will always be free to take care of the baby.
+
+Cameron and Jamie want to come up with a daily baby care schedule such that:
+
+Scheduled baby time must not interfere with a scheduled activity. That is, during Cameron's activities, Jamie has to be in charge of the baby, and vice versa.
+Each of Cameron and Jamie must have exactly 720 minutes assigned to them.
+The number of exchanges — that is, the number of times the person in charge of the baby changes from one partner to the other — must be as small as possible.
+For example, suppose that Jamie and Cameron have a single activity each: Jamie has a morning activity from 9 am to 10 am, and Cameron has an afternoon activity from 2 pm to 3 pm. One possible but suboptimal schedule would be for Jamie to take care of the baby from midnight to 6 am and from noon to 6 pm, and for Cameron to take care of the baby from 6 am to noon and 6 pm to midnight. That fulfills the first two conditions, and requires a total of 4 exchanges, which happen at midnight, 6 am, noon and 6 pm. If there is an exchange happening at midnight, it is counted exactly once, not zero or two times.
+
+A better option would be for Cameron to take care of the baby from midnight to noon, and Jamie to take care of the baby from noon to midnight. This schedule also fulfills the first two conditions, but it uses only 2 exchanges, which is the minimum possible.
+
+Given Cameron's and Jamie's lists of activities, and the restrictions above, what is the minimum possible number of exchanges in a daily schedule?
+
+Input
+
+The first line of the input gives the number of test cases, T. T test cases follow. Each test case starts with a line containing two integers AC and AJ, the number of activities that Cameron and Jamie have, respectively. Then, AC + AJ lines follow. The first AC of these lines contain two integers Ci and Di each. The i-th of Cameron's activities starts exactly Ci minutes after the start of the day at midnight and ends exactly Di minutes after the start of the day at midnight (taking exactly Di - Ci minutes). The last AJ of these lines contain two integers Ji and Ki each, representing the starting and ending time of one of Jamie's activities, in minutes counting from the start of the day at midnight (same format as Cameron's). No activity spans two days, and no two activities overlap (except that one might end exactly as another starts, but an exchange can still occur at that time).
+
+Output
+
+For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y the minimum possible number of exchanges, as described in the statement.
+
+Limits
+
+1 ≤ T ≤ 100.
+0 ≤ Ci < Di ≤ 24 × 60, for all i.
+0 ≤ Ji < Ki ≤ 24 × 60, for all i.
+Any two of the intervals of {[Ci, Di) for all i} union {[Ji, Ki) for all i} have an empty intersection. (The intervals are closed on the left and open on the right, which ensures that two exactly consecutive intervals have nothing in between but do not overlap.)
+sum of {Di - Ci for all i} ≤ 720.
+sum of {Ki - Ji for all i} ≤ 720.
+Small dataset
+
+0 ≤ AC ≤ 2.
+0 ≤ AJ ≤ 2.
+1 ≤ AC + AJ ≤ 2.
+Large dataset
+
+0 ≤ AC ≤ 100.
+0 ≤ AJ ≤ 100.
+1 ≤ AC + AJ ≤ 200.
+Sample
+
+
+Input 
+ 
+5
+1 1
+540 600
+840 900
+2 0
+900 1260
+180 540
+1 1
+1439 1440
+0 1
+2 2
+0 1
+1439 1440
+1438 1439
+1 2
+3 4
+0 10
+1420 1440
+90 100
+550 600
+900 950
+100 150
+1050 1400 	
+Output 
+
+
+Case #1: 2
+Case #2: 4
+Case #3: 2
+Case #4: 4
+Case #5: 6
+
+Note that Sample Cases #4 and #5 would not appear in the Small dataset.
+
+Sample Case #1 is the one described in the problem statement.
+
+In Sample Case #2, Jamie must cover for all of Cameron's activity time, and then Cameron must cover all the remaining time. This schedule entails four exchanges.
+
+In Sample Case #3, there is an exchange at midnight, from Cameron to Jamie. No matter how the parents divide up the remaining 1438 non-activity minutes of the day, there must be at least one exchange from Jamie to Cameron, and there is no reason to add more exchanges than that.
+
+In Sample Case #4, note that back-to-back activities can exist for the same partner or different partners. There is no exchange at midnight because Cameron has activities both right before and right after that time. However, the schedule needs to add some time for Cameron in between Jamie's activities, requiring a total of 4 exchanges. Notice that it is optimal to add a single interval for Cameron of length 718 somewhere between minutes 2 and 1438, but the exact position of that added interval does not impact the number of exchanges, so there are multiple optimal schedules.
+
+In Sample Case #5, a possible optimal schedule is to assign Cameron to the intervals (in minutes) 100-200, 500-620, and 900-1400.
+
+
+# Problem C. Core Training
+https://code.google.com/codejam/contest/3274486/dashboard#s=p2
+Problem
+
+Writing Code Jam problems is hard, so we have built an AI to come up with new ideas. To make the AI as creative as possible, we have given it N different "cores", each of which has its own "personality". However, just like people, these cores may become distracted or corrupt or may refuse to work; the i-th core has a success probability Pi of functioning properly. As long as at least K of the cores function properly, the AI will function properly. Otherwise, it will probably become evil and trap us in a maze of fiendish puzzles of its own design. And who knows what it might do to Code Jam — it might just write a bunch of tough probability problems!
+
+To prevent this from happening, we plan to train one or more of the cores to become more reliable. We have a total of U "training units" that we can use to improve the cores. Spending X units on the i-th core will add X to its success probability. We can divide up the units among the cores however we like, and it is possible that one or more cores may not receive any units. Of course, a core's success probability cannot be increased above 1.
+
+If we assign the training units to maximize the probability that the AI will function properly, what is that probability?
+
+Solving this problem
+
+This problem has 2 Small datasets and no Large dataset. You must solve the first Small dataset before you can attempt the second Small dataset. You will be able to retry either of the datasets (with a time penalty).
+
+Input
+
+The first line of the input gives the number of test cases, T. T test cases follow; each consists of three lines. The first line contains two integers N and K: the total number of cores, and the minimum number of cores that must succeed for the AI to function properly. The second line contains one rational U: the number of training units. The third line contains N rational numbers Pi; the i-th of these gives the probability that the i-th core will function properly. All of these probabilities are specified to exactly four decimal places of precision.
+
+Output
+
+For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the probability that the AI will function properly if the training units are assigned optimally. y will be considered correct if it is within an absolute or relative error of 10-6 of the correct answer. See the FAQ for an explanation of what that means, and what formats of real numbers we accept.
+
+Limits
+
+1 ≤ T ≤ 100.
+1 ≤ N ≤ 50.
+For all i, 0.0000 ≤ Pi ≤ 1.0000.
+0.0000 ≤ U ≤ N - the sum of all Pi. (There will not be more training units than can be used.)
+Small dataset 1
+
+K = N. (All of the cores must function properly for the AI to function properly.)
+Small dataset 2
+
+1 ≤ K ≤ N.
+Sample
+
+
+Input 
+
+4
+4 4
+1.4000
+0.5000 0.7000 0.8000 0.6000
+2 2
+1.0000
+0.0000 0.0000
+2 1
+0.0000
+0.9000 0.8000
+2 1
+0.1000
+0.4000 0.5000
+
+Output 
+ 
+
+
+Case #1: 1.000000
+Case #2: 0.250000
+Case #3: 0.980000
+Case #4: 0.760000
+
+Note that the last two sample cases would not appear in Small dataset 1.
+
+In Sample Case #1, we have enough training units to spend to give all cores a success probability of 1, so the AI will certainly function properly.
+
+In Sample Case #2, both of the cores must function properly for the AI to function properly, so we must give each core at least some training units. The best option turns out to be to train each one up to 0.5. Then the probability that the AI functions properly is 0.5 × 0.5 = 0.25. Any other assignment is inferior; for instance, if we train one core to 0.9 and the other core to 0.1, the probability of success is only 0.9 × 0.1 = 0.09.
+
+In Sample Case #3, we have no training units to spend, and at least one of the two cores must function properly for the AI to function properly. We can approach this by first calculating the probability that the AI does not function properly, which happens only if both cores fail to function properly. The probability that both cores fail is (1 - 0.9) × (1 - 0.8) = 0.02. So the probability that at least one core functions properly, and thus that the AI functions properly, is 1 - 0.02 = 0.98.
+
+In Sample Case #4, the optimal strategy is to give all the training units to the second core. That makes the probability of at least one core functioning properly 1 - (0.6 × 0.4) = 0.76. All other options are inferior; for example, giving all the training units to the first core only yields 0.75, and dividing them equally among the cores gives 0.7525.
