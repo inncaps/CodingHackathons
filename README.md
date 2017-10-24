@@ -7,8 +7,8 @@ It will contain the problems and solutions in one or more languages for the Past
 Eg : 
  1. IEEEXtreme Competitions
  2. Google Code Jam Competitions
- 3. Hackerank Competitions
- 4. CodeCef Competitions
+ 3. HackerRank Competitions
+ 4. CodeChef Competitions<br>
 You can add other competition's solutions and problems here.
  
  ## Guidelines
